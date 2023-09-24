@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/framework.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/master.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Firebase JavaScript SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase/auth"></script>
+  </head>
+  <body>
+    <section class="page d-flex">
+      <div class="sidebar bg-white p-20 p-relative">
+        <h3 class="p-relative text-c mt-0">
+          <img class="hide-mobile" src="imgs/logo.png" />
+          <img src="imgs/log.png" class="log" />
+        </h3>
+        <ul>
+            <li>
+                <h1 id="wel"></h1>
+            </li>
+          <li>
+            <a
+              class="active d-flex align-center fs-14 c-black rad-6 p-10"
+              href="Home.html"
+            >
+              <i class="fa-solid fa-chart-bar fa-fw"></i>
+              <span class="hide-mobile">الصفحة الرئيسة </span></a
+            >
+          </li>
+          <li>
+            <a
+              class="active d-flex align-center fs-14 c-black rad-6 p-10"
+              href="FormKashf.html"
+            >
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span class="hide-mobile">كشف حجز الكشف </span></a
+            >
+          </li>
+          <li>
+            <a
+              class="active d-flex align-center fs-14 c-black rad-6 p-10"
+              href="StorDay.html"
+            >
+              <i class="fa-solid fa-user fa-fw"></i>
+              <span class="hide-mobile">الحالات اليومية </span></a
+            >
+          </li>
+        
+        </ul>
+      </div>
+      <div class="content w-full">
+        <!-- Start Head -->
+        <section class="head bg-white p-15 between-flex">
+          <div class="search p-relative">
+            <input class="p-10" type="search" placeholder="search" />
+          </div>
+          <div class="icons d-flex align-center">
+            <span class="notification p-relative">
+              <i class="fa-regular fa-bell fa-lg"></i>
+            </span>
+            <span>
+              <i
+                id="Logout-user"
+                style="
+                  padding-left: 20px;
+                  font-size: 25px;
+                  color: red;
+                  cursor: pointer;
+                "
+                class="fa-solid fa-right-to-bracket"
+              ></i>
+            </span>
+
+            <img src="imgs/rabea.png" class="beaa"  alt="" />
+          </div>
+        </section>
+        <!-- End head -->
+      </div>
+    </section>
+    
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="js/jquery_3.7.0.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap_5.3.0.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="Log in/js/main.js"></script>
+  </body>
+</html>

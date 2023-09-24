@@ -1,0 +1,226 @@
+    :root {
+        --blue-color: #0075ff;
+        --blue-alt-color: #0d69d5;
+        --orange-color: #f59e0b;
+        --green-color: #22c55e;
+        --red-color: #f44336;
+        --grey-color: #888;
+    }
+
+
+    * {
+        box-sizing: border-box;
+    }
+
+    *:focus {
+        outline: none;
+    }
+
+    body {
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .page {
+        background-color: #eee;
+        min-height: 200VH;
+    }
+
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    /* start sidebar */
+    .sidebar {
+        width: 216px;
+        box-shadow: 0 0 10px #ddd;
+        position: fixed;
+        z-index: 666;
+        height: 100vh;
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: white;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--blue-color);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--blue-alt-color);
+    }
+
+
+
+    .sidebar>h3 {
+        margin-bottom: 50px;
+    }
+#wel{
+    font-size: 15px;
+    color: #777;
+    text-align: center;
+    
+}
+    .sidebar>h3 img {
+        width: 200px;
+    }
+
+    .sidebar>h3::before {
+        content: "";
+        background-color: #0f64ec;
+        position: absolute;
+        width: 150px;
+        height: 5px;
+        left: 50%;
+        bottom: -20px;
+        transform: translateX(-50%);
+    }
+
+    .sidebar>h3::after {
+        content: "";
+        background-color: #0f64ec;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 5px white solid;
+        left: 50%;
+        bottom: -31px;
+        transform: translateX(-50%);
+
+    }
+
+    .sidebar ul li a {
+        transition: 0.3s;
+        margin-bottom: 5px;
+    }
+
+    .sidebar ul li a:active, .sidebar ul li a:hover {
+        background-color: #0f64ec;
+        color: white;
+    }
+
+
+    .sidebar ul li a span {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    .log {
+        display: none;
+    }
+
+    /* End sidebar */
+    @media(max-width:767px) {
+        .sidebar {
+            width: 56px;
+            padding: 10px;
+        }
+
+        .sidebar .log {
+            display: inline;
+            width: 50px;
+        }
+
+        .sidebar>h3 {
+            margin-bottom: 15px;
+        }
+
+        .sidebar>h3::before,
+        .sidebar>h3::after {
+            display: none;
+        }
+        #wel{
+            display: none;
+        }
+
+    }
+
+    .head {
+        position: fixed;
+        width: calc(100% - 216px);
+        z-index: 555;
+    }
+
+    @media(max-width:767px) {
+        .head {
+            position: fixed;
+            width: calc(100% - 50px);
+            z-index: 555;
+        }
+    }
+
+    /* Start content */
+    .content {
+        overflow: hidden;
+        margin-left: 216px;
+        z-index: 621;
+    }
+
+    @media(max-width:767px) {
+        .content {
+            margin-left: 57px;
+
+        }
+    }
+
+    .head .search::after {
+        font-family: var(--fa-style-family-classic);
+        content: "\f002";
+        font-weight: 900;
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 14px;
+        color: var(--grey-color);
+    }
+
+    .head .search input {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin-left: 5px;
+        padding-left: 30px;
+        width: 160px;
+        transition: 0.3s;
+    }
+
+    .head .search input:focus {
+        width: 200px;
+    }
+
+    .head .search input:focus::placeholder {
+        opacity: 0;
+    }
+
+    .head .icons .notification::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--red-color);
+        right: -5px;
+        top: -5px;
+    }
+
+    .head .icons img {
+        width: 40px;
+        height: 40px;
+        margin-left: 30px;
+        border-radius: 50%;
+        border: 2px solid rgba(233, 232, 232, 0.323);
+        background-color: #0075ff;
+        box-shadow: 0 0 10px #ddd;
+    }
